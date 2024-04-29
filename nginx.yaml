@@ -3,11 +3,11 @@
   become: yes #equal to -b in adhoc commands, getting root access
   tasks:
   - name: install nginx
-    ansible.builting.dnf:
+    ansible.builtin.dnf:
       name: niginx
       state: latest
   - name:
     ansible.builtin.service:
       name: nginx
-      state: start
+      state: start  
       enabled: yes
