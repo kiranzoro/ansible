@@ -1,13 +1,13 @@
-- name: install and run nginx
+- name: connecting to host
   hosts: localhost
-  become: yes #equal to -b in adhoc commands, getting root access
-  tasks:
-  - name: install nginx
+  become: yes
+  tasks: installing nginx
+  - name: Install
     ansible.builtin.dnf:
-      name: nginx
-      state: latest
-  - name:
+    name: nginx
+    state: latest
+  - name: run nginx
     ansible.builtin.service:
-      name: nginx
-      state: started  
-      enabled: yes
+    name: nginx
+    state: started
+    enabled: yes
