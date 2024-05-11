@@ -3,7 +3,7 @@
   vars_prompt:
   - name: course
     prompt: please enter course name
-    private: false 
+    private: true 
   vars:
     Trainer: Siva Kumar
     Duration: 150 hours
