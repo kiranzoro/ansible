@@ -6,6 +6,7 @@
   - name: print information
     vars:
       course: Terraform
+      Duration: 200 Hours
     ansible.builtin.debug:
       msg: "Hi, we are learning {{course}} with {{Trainer}} for {{Duration}}"
   - name: print information
