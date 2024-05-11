@@ -1,0 +1,13 @@
+- name: varibles
+  hosts: localhost
+  vars_prompt:
+  - name: course
+    prompt: please enter course name
+    private: false 
+    course: "Ansible"
+    Trainer: "Siva Kumar"
+    Duration: "120 hours"
+  tasks:
+  - name: print information
+    ansible.builtin.debug:
+      msg: "Hi, we are learning {{course}} with {{Trainer}} for {{Duration}}"
