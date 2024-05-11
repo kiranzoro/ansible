@@ -4,6 +4,9 @@
   - name: course
     prompt: please enter course name
     private: false 
+  vars:
+    Trainer: Siva Kumar
+    Duration: 150 hours
   tasks:
   - name: print information
     ansible.builtin.debug:
