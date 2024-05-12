@@ -1,5 +1,5 @@
 - name: Play level
-  hosts: localhost
+  hosts: Localhost
   tasks:
   - name: task level
     ansible.builtin.debug:
