@@ -1,0 +1,6 @@
+- name: Play level
+  hosts: localhost
+  tasks:
+  - name: task level
+    ansible.builtin.debug:
+      msg: Hi, I joined {{course}} course, My trainer is {{trainer}} for {{duration}}
