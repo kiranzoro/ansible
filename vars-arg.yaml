@@ -1,0 +1,6 @@
+- name: Variable through arguments
+  hosts: localhost
+  tasks:
+  - name: print msg
+    ansible.builtin.debug:
+    msg: "Hi this is kiran I'm learning {{course}}, my teacher is {{teacher}}"
