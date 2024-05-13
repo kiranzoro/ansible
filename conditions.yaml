@@ -12,5 +12,5 @@
       msg: "{{USER}}"
 
   - name: user add
-      ansible.builtin.command: useradd expense
-      when: USER.rc != 0
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0
