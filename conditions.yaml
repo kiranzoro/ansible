@@ -1,0 +1,13 @@
+- name: conditions
+  hosts: localhost
+  tasks:
+  - name: user check
+    ansible.builtin.command: id expense
+    register: USER
+
+  - name: msg
+    ansible.builtin.debug:
+      msg: {{USER}}
+  - name: user add
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0
