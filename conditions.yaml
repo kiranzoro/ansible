@@ -4,6 +4,7 @@
   - name: user check
     ansible.builtin.command: id expense
     register: USER
+    ignore_errors: true
 
   - name: msg
     ansible.builtin.debug:
