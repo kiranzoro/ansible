@@ -1,6 +1,6 @@
 - name: if
   hosts: localhost
-  vars_prompt:
+  vars_prompt: #promots are alwasys considered as strings
   - name: number
     prompt: Enter the Number
     private: false
@@ -8,4 +8,4 @@
   - name: given number less than 10
     ansible.builtin.debug:
       msg: "Give number {{number}} is less than 10"
-    when: number < 10
+    when: number | int < 10
