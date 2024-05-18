@@ -28,7 +28,7 @@
 - name: unique
   hosts: localhost
   vars:
-    items=[
+    items: [
       {'key': 'course', 'value':'Devops AWS'}
       {'key': 'trainer', 'value': 'God'}
       {'key': 'Duration', 'value': 233 hours}
