@@ -9,11 +9,11 @@
     ansible.builtin.debug:
       msg: "Give number {{number}} is less than 10"
     when: number | int < 10
-  - name: lowercase
-    hosts: localhost
-    vars:
-      greeting: "HELLO"
-    tasks:
-    - name: print lower case
-      ansible.builtin.debug:
-        msg: "{{greeting}} | lower"
+- name: lowercase
+  hosts: localhost
+  vars: 
+    greeting: "HELLO"
+  tasks:
+  - name: print lower case
+    ansible.builtin.debug:
+      msg: "{{greeting}} | lower"
