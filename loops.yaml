@@ -1,11 +1,11 @@
-- name: loops
-  hosts: localhost
+- name: insatll packages
+  hosts: web
   tasks:
   - name: loops
-    ansible.builtin.debug:
-      msg: "Hello {{item}}"
+    ansible.builtin.dnf:
+      name: "{{item}}"
+      state: latest
     loop:
-    - linux
-    - windows
-    - shell
-    - ansible
+    - mysql
+    - nginx
+    - postfix
