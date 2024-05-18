@@ -6,6 +6,7 @@
     ansible.builtin.dnf:
       name: "{{item}}"
       state: latest
+      enabled: yes
     loop:
     - mysql
     - nginx
