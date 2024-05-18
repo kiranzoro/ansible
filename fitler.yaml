@@ -17,3 +17,19 @@
   - name: print lower case
     ansible.builtin.debug:
       msg: "{{greeting | lower }}, This is Kiran "
+- name: uppercase
+  hosts: localhost
+  vars: 
+    greeting: "hell"
+  tasks:
+  - name: print lower case
+    ansible.builtin.debug:
+      msg: "{{greeting | upper }}, This is Kiran "
+- name: unique
+  hosts: localhost
+  vars:
+    numbers: [1,5,3,5,3,3,5,2,5,7,7,8,3,8]
+  tasks:
+  - name: remove duplicates
+    ansible.builting.debug:
+      msg: {{numbers | unique}}
