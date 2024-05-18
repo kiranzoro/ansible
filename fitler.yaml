@@ -32,4 +32,4 @@
   tasks:
   - name: remove duplicates
     ansible.builting.debug:
-      msg: {{ numbers | unique}}
+      msg: "{{ numbers | unique}}"
