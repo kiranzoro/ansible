@@ -28,11 +28,10 @@
 - name: unique
   hosts: localhost
   vars:
-    items: [
-      {'key': 'course', 'value':'Devops AWS'}
-      {'key': 'trainer', 'value': 'God'}
-      {'key': 'Duration', 'value': 233 hours}
-    ]
+    items: 
+    - {'key': 'course', 'value':'Devops AWS'}
+    - {'key': 'trainer', 'value': 'God'}
+    - {'key': 'Duration', 'value': 233 hours}
   tasks:
   - name: remove duplicates
     ansible.builtin.debug:
